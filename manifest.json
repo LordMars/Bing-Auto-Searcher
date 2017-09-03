@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bing Auto Searcher",
+  "description": "Automatically does bing rewards searches on chrome startup",
+  "version": "2.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+
+  "background": {//should run the code in popup.js only once on, on browser startup. Background page only runs once on startup.
+    "scripts": ["popup.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "alarms",
+    "background",
+    "debugger",
+    "tabs",
+    "activeTab",
+    "webNavigation",
+    "https://ajax.googleapis.com/"
+  ]
+}
